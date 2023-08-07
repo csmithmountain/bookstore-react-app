@@ -11,7 +11,7 @@ const BookData = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/library/books");
+      const response = await axios.get("http://localhost:3001/library/books");
 
       if (response.data.books && Array.isArray(response.data.books)) {
         setBooks(response.data.books);
