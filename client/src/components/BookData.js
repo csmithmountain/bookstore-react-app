@@ -12,11 +12,9 @@ const BookData = () => {
   const fetchBooks = async () => {
     try {
       const response = await axios.get("http://localhost:3000/library/books");
-      console.log("API Response Data:", response.data); // Log the API response data
-      // Check if the response data has a 'books' property that is an array
+
       if (response.data.books && Array.isArray(response.data.books)) {
         setBooks(response.data.books);
-        console.log("Books State:", books); // Log the books state after setting it
       } else {
         console.error(
           "Invalid response data format. Expected a 'books' property that is an array."
@@ -35,14 +33,29 @@ const BookData = () => {
 
   return (
     <div>
-      <h2>List of Books</h2>
-      <ul>
-        {books.map((book) => (
-          <li key={book.title}>
-            {book.title} - {book.author} - Quantity: {book.quantity}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Available</th>
+            <th>Order</th>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map((book) => (
+            <tr key={book.title}>
+              <td>{book.title}</td>
+              <td>{book.author}</td>
+              <td>{book.quantity}</td>
+              <td>
+                <input placeholder="Amount"></input>
+                <button>Order</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
