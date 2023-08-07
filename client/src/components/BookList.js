@@ -3,9 +3,12 @@ import BookData from "./BookData";
 
 function BookList() {
   return (
-    <div data-testid="bookList">
-      <BookData />
-    </div>
+    <>
+      <div data-testid="bookList">
+        <input placeholder="Search..."></input>
+        <BookData />
+      </div>
+    </>
   );
 }
 
