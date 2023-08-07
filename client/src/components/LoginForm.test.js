@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import LoginForm from "./LoginForm";
