@@ -49,7 +49,6 @@ const BookData = () => {
 
   return (
     <div>
-      <h2>List of Books</h2>
       <SearchBar onSearch={handleSearch} />
       <table>
         <thead>

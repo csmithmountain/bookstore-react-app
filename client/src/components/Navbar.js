@@ -1,14 +1,5 @@
-import { useState } from "react";
-import LoginForm from "./LoginForm";
-
-const LoginModal = ({ onClose }) => {
-  return (
-    <div>
-      <LoginForm onSuccess={onClose} />
-      <button onClick={onClose}>Close</button>
-    </div>
-  );
-};
+import React, { useState } from "react";
+import LoginModal from "./LoginModal"; // Import the LoginModal component
 
 function Navbar() {
   const [showLoginModal, setShowLoginModal] = useState(false);
