@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LoginModal from "./LoginModal"; // Import the LoginModal component
+import LoginModal from "./LoginModal";
 
 function Navbar() {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -15,12 +15,12 @@ function Navbar() {
       <h1>Bookster</h1>
       <p>The Amazing Bookstore</p>
       <ul>
-        <li>Home</li>
+        <li>Books</li>
         <li>Profile</li>
-        <li>
-          <button onClick={handleLoginButtonClick}>Login</button>
-        </li>
       </ul>
+
+      <button onClick={handleLoginButtonClick}>Login</button>
+
       {showLoginModal && (
         <div>
           <LoginModal onClose={handleCloseLoginModal} />
