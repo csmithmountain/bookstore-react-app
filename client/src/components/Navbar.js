@@ -14,10 +14,6 @@ function Navbar() {
     <nav>
       <h1>Bookster</h1>
       <p>The Amazing Bookstore</p>
-      <ul>
-        <li>Books</li>
-        <li>Profile</li>
-      </ul>
 
       <button onClick={handleLoginButtonClick}>Login</button>
 
