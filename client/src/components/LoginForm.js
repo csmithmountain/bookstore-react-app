@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { storeAccessToken } from "../Utils/tokenUtils";
 
 const LoginForm = ({ onSuccess }) => {
   const [isRegistering, setIsRegistering] = useState(false);
@@ -42,7 +43,7 @@ const LoginForm = ({ onSuccess }) => {
       const token = data.accessToken;
 
       // Store the token in localStorage
-      localStorage.setItem("accessToken", token);
+      storeAccessToken(token);
 
       // Set the login success message and clear the error message
       setLoginSuccess(true);
